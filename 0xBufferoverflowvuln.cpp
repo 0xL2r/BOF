@@ -5,16 +5,18 @@
 */
 
 #include <iostream>
-#include <string>
+#include <windows.h>
 
 int main()
 {
-    char username[10];
-    std::cout << "Please Enter your love for a tits with a words or numbers : ";
+	
+    SetConsoleTitle("BufferOverFlowByL0rH3k.");
+	char username[10];
+	std::cout << "Please Enter your love for a tits with a words or numbers : ";
     std::cin >> username;
     std::cout << "This is your love : " << username;
     std::cin.get();
     std::cin.get();
-}
-
-
+    
+    }
+    
