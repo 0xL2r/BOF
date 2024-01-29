@@ -73,7 +73,7 @@ A Buffer Overflow attack is Checked and Exploited in the following steps :
 /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 3000 -q 386F4337
 ```
 
-![](![image](https://github.com/0xL2r/BOF/assets/157466888/84803172-2c8b-413e-986f-f6599e59d36d)
+![image](https://github.com/0xL2r/BOF/assets/157466888/84803172-2c8b-413e-986f-f6599e59d36d)
 - This is how we  get the value of our Offset.
 
 ### 2(3) Overwriting the EIP
