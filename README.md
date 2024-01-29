@@ -1,4 +1,4 @@
-# Buffer-Overflow
+![image](https://github.com/0xL2r/BOF/assets/157466888/e04b0452-a0e3-477f-8dfa-729574a4ac75)# Buffer-Overflow
 ![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 [![](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
@@ -60,7 +60,7 @@ A Buffer Overflow attack is Checked and Exploited in the following steps :
 	-    now we need to create a pattern with same number of bytes, at which our application was crashed. 
 -    Say for example if we need to create a pattern after our Application was crashed at 3000 bytes, we will run this script: 
 ```
-/usr/share/metasploit-framework/tools/exploit/pattern\_create.rb -l 3000
+/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000
 ```
 - Now, we will add this pattern in our [Exploit.py](https://github.com/IamLucif3r/Buffer-Overflow/blob/main/Exploit.py) and run the script after restarting the application. 
  
@@ -70,10 +70,10 @@ A Buffer Overflow attack is Checked and Exploited in the following steps :
 - Again we will use the Metasploit framework, where we will enter the value of EIP obtained and if our pattern got matched we will get a value which will be the number of bytes over which we can get the control of the system.
 
 ```
-/usr/share/metasploit-framework/tools/exploit/pattern\_offset.rb -l 3000 -q 386F4337 
+/usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 3000 -q 386F4337
 ```
 
-![](assets/offsetfound.png)
+![](![image](https://github.com/0xL2r/BOF/assets/157466888/84803172-2c8b-413e-986f-f6599e59d36d)
 - This is how we  get the value of our Offset.
 
 ### 2(3) Overwriting the EIP
