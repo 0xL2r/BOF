@@ -62,7 +62,7 @@ A Buffer Overflow attack is Checked and Exploited in the following steps :
 ```
 /usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l 3000
 ```
-- Now, we will add this pattern in our [Exploit.py](https://github.com/IamLucif3r/Buffer-Overflow/blob/main/Exploit.py) and run the script after restarting the application. 
+- Now, we will add this pattern in our [Exploit.py](https://github.com/rootL0r/BOF/blob/main/Exploit.py) and run the script after restarting the application. 
  
 - Observe the value of EIP in the Immunity Debugger, this is the offset value we will be needed in creating exploitaion. 
 ![](assets/EIPoffsetvaluefound.png)
@@ -73,7 +73,7 @@ A Buffer Overflow attack is Checked and Exploited in the following steps :
 /usr/share/metasploit-framework/tools/exploit/pattern_offset.rb -l 3000 -q 386F4337
 ```
 
-![image](https://github.com/0xL2r/BOF/assets/157466888/84803172-2c8b-413e-986f-f6599e59d36d)
+![image](https://github.com/rootL0r/BOF/assets/157466888/84803172-2c8b-413e-986f-f6599e59d36d)
 - This is how we  get the value of our Offset.
 
 ### 2(3) Overwriting the EIP
@@ -108,7 +108,7 @@ NOTE: VulnServer is made to be very easy so we will not found any bad characters
 	-    Type into the Debugger Bottom - **!mona modules** & a window will pop-up.    
 	-   Now we can see different permission settings, and we are looking for something attached to a vulnerable server  (we'll ensure that all are FALSE)
 	-    Now coming back to Terminal, we use Nasm.rb (you can use locate nasm) to convert assembly to hex code.
-	-    ![image](https://github.com/0xL2r/BOF/assets/157466888/712b1b84-1c1b-498a-9749-6174426114e0)
+	-    ![image](https://github.com/rootL0r/BOF/assets/157466888/712b1b84-1c1b-498a-9749-6174426114e0)
 	-    Here we are making the pointer to jump to our malicious code. (above used is Assembly Language). It is observed that the HEX equal to assmbly is **FFE4**.
 	-    we will find a pointer using command: " **!mona find -s "\\xff\\xe4\\"  -m essfunc.dll** "
 	-    ![](assets/modulesearch.png)
@@ -130,7 +130,7 @@ The IP Address should be the IP Address of  your Attacking Machine, where we wil
 
 - <u>Explanation of the Above Code</u>:
 	- **msfvenom** is used here to create a payload we use **\-p** switch to define the type of payload we are going to use, here the payload is **windows/shell\_reverse\_tcp,** it will prompt a reverse shell for us. In order to get a reverse shell we need to define **LHOST & LPORT** which is the ip address of attacking machine and port open to listen. **EXITFUNC=thread** is used for stability in payload , **\-f c** sets the file type used, here it is c. **\-a x86** defines the architecture type and **\-b** defines the bad characters present, **"\\x00".**
- ![image](https://github.com/0xL2r/BOF/assets/157466888/7ee70ee9-6316-4c01-be4f-f97751f847f4)
+ ![image](https://github.com/rootL0r/BOF/assets/157466888/7ee70ee9-6316-4c01-be4f-f97751f847f4)
  here is what our payload looks like.
 - Add the Payload generated to the Exploit.py script, and restart the application. Then on your attacking machine start the NetCat Listening on the specific port that you gave in the payload creation step and then run the exploit script. 
 	- The Overflow will get executed and you'll get the root access to the Victim's Machine. 
