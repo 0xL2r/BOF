@@ -1,4 +1,4 @@
-# Buffer-Overflow By #L0r
+# Buffer-Overflow.
 ![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 [![](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
@@ -144,4 +144,4 @@ Fork this repo, do the required changes and send me a PR. I'll merge your reques
 - Improvise the Documentation (because I'm not very good in it).
 
 
-Create by : [L0rH2CkEr.](https://github.com/rootL0r)
+Create by : [L0r](https://github.com/rootL0r)
